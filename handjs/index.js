@@ -8,7 +8,7 @@ var colors = ["rgb(100, 255, 100)", "rgb(255, 0, 0)", "rgb(0, 255, 0)", "rgb(0, 
 var onPointerMove = function(evt) {
     if (pointerDown[evt.pointerId]) {
 
-        var color = "white" ;// colors[evt.pointerId % colors.length];
+        var color = "black" ;// colors[evt.pointerId % colors.length];
 
         context.strokeStyle = color;
 
@@ -64,8 +64,8 @@ var onload = function() {
 
     context = plainCanvas.getContext("2d");
 
-    context.fillStyle = "rgba(50, 50, 120, 1)";
-    context.fillRect(0, 0, plainCanvas.width, plainCanvas.height);
+    context.fillStyle = "rgba(50, 50, 120, 0.5)";
+    //context.fillRect(0, 0, plainCanvas.width, plainCanvas.height);
 
     //$("body").on("pointerdown", "canvas", onPointerDown);
     plainCanvas.addEventListener("pointerdown", onPointerDown, false);
